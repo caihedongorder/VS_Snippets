@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>glfwViewport</Title>
+      <Author>
+      </Author>
+      <Description>
+      </Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>glfwViewport</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>WINDOW_WIDTH</ID>
+          <ToolTip>WINDOW_WIDTH</ToolTip>
+          <Default>WINDOW_WIDTH</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>WINDOW_HEIGHT</ID>
+          <ToolTip>WINDOW_HEIGHT</ToolTip>
+          <Default>WINDOW_HEIGHT</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>Window</ID>
+          <ToolTip>Window</ToolTip>
+          <Default>Window</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>e</ID>
+          <ToolTip>e</ToolTip>
+          <Default>e</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>en</ID>
+          <ToolTip>en</ToolTip>
+          <Default>en</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="cpp" Delimiter="$"><![CDATA[//设置Opengl视口
+glViewport(0,0,$WINDOW_WIDTH$, $WINDOW_HEIGHT$);
+glfwSetWindowSizeCallback($Window$, [](auto window, auto width, auto height) {
+    auto OldWindow = glfwGetCurrentContext();
+    if (OldWindow != window	)
+    {
+        glfwMakeContextCurrent(window);
+    }
+    glViewport(0, 0, width, height);
+    if (OldWindow != window)
+    {
+        glfwMakeContextCurrent(OldWindow);
+    }
+});
+$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

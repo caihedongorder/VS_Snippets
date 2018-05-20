@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>glVertexAttribP</Title>
+      <Author>
+      </Author>
+      <Description>
+      </Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>glVertexAttribP</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>index</ID>
+          <ToolTip>index</ToolTip>
+          <Default>index</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>size</ID>
+          <ToolTip>size</ToolTip>
+          <Default>size</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>stride</ID>
+          <ToolTip>stride</ToolTip>
+          <Default>stride</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>offset</ID>
+          <ToolTip>offset</ToolTip>
+          <Default>offset</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>e</ID>
+          <ToolTip>e</ToolTip>
+          <Default>e</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>en</ID>
+          <ToolTip>en</ToolTip>
+          <Default>en</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="cpp" Delimiter="$"><![CDATA[glVertexAttribPointer($index$, $size$ , GL_FLOAT, GL_FALSE, $stride$ , (void*) $offset$ );
+glEnableVertexAttribArray($index$);
+$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

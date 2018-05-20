@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>glfwMainLoop</Title>
+      <Author>
+      </Author>
+      <Description>
+      </Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>glfwMainLoop</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>Window</ID>
+          <ToolTip>Window</ToolTip>
+          <Default>Window</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>e</ID>
+          <ToolTip>e</ToolTip>
+          <Default>e</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>en</ID>
+          <ToolTip>en</ToolTip>
+          <Default>en</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="cpp" Delimiter="$"><![CDATA[//窗口消息循环
+while (!glfwWindowShouldClose($Window$))
+{
+    glClear(GL_COLOR_BUFFER_BIT);
+
+    glfwSwapBuffers($Window$);
+    glfwPollEvents();
+}
+glfwTerminate();
+return 0;
+$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
